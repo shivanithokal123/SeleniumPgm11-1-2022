@@ -1,0 +1,18 @@
+package shruti;
+
+import org.openqa.selenium.webdriver;
+import org.openqa.selenium.chrome.chromedriver;
+
+public class browser {
+	public class openchromebrowser {
+		public static void main(String []args) 
+		{
+			System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+			webdriver s =new chromedriver();
+			s.get("https://www.linkedin.com/");
+			
+			
+		}
+
+}
+}

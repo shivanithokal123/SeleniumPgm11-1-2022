@@ -1,0 +1,9 @@
+package com.pageLayer;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class CrmLandingPage {
+	public CrmLandingPage() {
+		PageFactory.initElements(driver, this);
+	}
+}

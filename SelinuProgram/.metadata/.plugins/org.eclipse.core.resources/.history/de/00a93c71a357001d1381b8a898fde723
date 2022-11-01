@@ -1,0 +1,22 @@
+package com.pageLayer;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class userPage {
+	public userPage() {
+		PageFactory.initElements(driver, this);
+	}
+	//------------- Obj repo -----------------
+	@FindBy(xpath="//button[@class='mat-icon-button mat-button-base']")
+	private WebElement user_menu_btn;
+	
+	@FindBy(xpath="//a[@class='ng-star-inserted']")
+	private WebElement  
+	
+	//--------------Action methods------------ 
+		public void clickOnUserMenuBtn() {
+			user_menu_btn.click();
+		}
+}

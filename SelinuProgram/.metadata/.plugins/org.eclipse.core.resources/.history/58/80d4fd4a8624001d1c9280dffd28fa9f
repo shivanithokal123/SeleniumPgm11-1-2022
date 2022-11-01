@@ -1,0 +1,3 @@
+module SelinumPractise {
+	requires jakarta.activation;
+}

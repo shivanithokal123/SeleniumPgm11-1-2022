@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.utility.ListnerSetup"/>
+    <listener class-name="com.utility.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="com.testLayer.crmLaunchPageTest">
+        <methods>
+          <include name="start"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyLaunchCrm"/>
+          <include name="stop"/>
+        </methods>
+      </class> <!-- com.testLayer.crmLaunchPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

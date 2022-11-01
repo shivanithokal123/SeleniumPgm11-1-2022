@@ -1,0 +1,38 @@
+package selenium_demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AlertPoPup {
+	
+	public static void main(String args[]) throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shivani\\Documents\\UNB-Per\\Selinum jar file\\chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.get("https://demoqa.com/alerts");
+		Thread.sleep(1000);
+		AlertPoPup obj1=new AlertPoPup();
+		obj1.simplealert();
+		obj1.confirmalert();
+	}
+		
+		public void simplealert() throws InterruptedException {
+			WebDriver driver =new ChromeDriver();
+			driver.findElement(By.xpath("//button[contains(@id,'alertButton')]")).click();
+			Thread.sleep(1000);
+			//accept alert button on site 
+			driver.switchTo().alert().accept();
+		}
+		public void confirmalert() throws InterruptedException {
+			WebDriver driver =new ChromeDriver();
+			driver.findElement(By.xpath("//button[contains(@id,'timerAlertButton')]")).click();
+			Thread.sleep(1000);
+			//accept alert button on site 
+			driver.switchTo().alert().dismiss();
+			
+		}
+	}
+
+

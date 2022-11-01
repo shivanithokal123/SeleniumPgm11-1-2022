@@ -1,0 +1,12 @@
+package openchrome;
+
+public class openchrome_browser {
+	public static void main(String args[]) {
+		System.setProperty("webdriver.chrome.driver", C:\\Users\Shivani\Documents\UNB-Per);
+		Webdriver driver = new ChromeDriver();
+		driver.get("https://about.facebook.com/");
+		
+		
+	}
+
+}

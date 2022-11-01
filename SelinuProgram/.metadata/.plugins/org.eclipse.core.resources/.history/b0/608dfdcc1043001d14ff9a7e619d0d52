@@ -1,0 +1,32 @@
+package activeTest;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import activePOM.ActimeHomePage;
+import activePOM.ActtimeLoginPage;
+
+public class mainPom {
+	public static  void main() throws InterruptedException
+	{ 
+		System.getProperty("webdriver.chrome.driver","C:\\\\Users\\\\Shivani\\\\Documents\\\\UNB-Per\\\\Selinum jar file\\\\chromedriver106.exe");
+		WebDriver driver =new ChromeDriver();
+		driver.get("http://localhost/login.do");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		ActtimeLoginPage Login =new ActtimeLoginPage(driver);
+		Login.UserName();
+		Login.Password();
+		Login.loginButton();
+		
+		Thread.sleep(2000);
+		
+		
+		ActimeHomePage Logout = new ActimeHomePage(driver);
+		Logout.CheckLogo();
+		Logout.logoutButton();
+		
+		
+	}
+}

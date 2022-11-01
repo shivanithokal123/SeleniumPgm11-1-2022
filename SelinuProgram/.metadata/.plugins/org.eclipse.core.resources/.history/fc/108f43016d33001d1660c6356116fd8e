@@ -1,0 +1,44 @@
+package selenium_demo;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Drag_Drop {
+	public static void main(String args[]) throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shivani\\Documents\\UNB-Per\\Selinum jar file\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		//delete all cookies on site which is saved id pass 
+		driver.manage().deleteAllCookies();
+		driver.get("https://seleniumpractise.blogspot.com/2016/08/how-to-perform-mouse-hover-in-selenium.html");
+	   WebElement action= driver.findElement(By.xpath("//button[(@class='dropbtn')]"));
+	   Thread.sleep(1000);
+	    Actions s = new Actions(driver);
+	    s.moveToElement(action).perform();
+	   List<WebElement> obj = driver.findElements(By.xpath("//div[(@class='dropdown-content')]//a"));
+		int count=obj.size();
+		System.out.println(count);
+		Thread.sleep(1000);
+		for(int i=0; i<	count; i++)
+		{
+			WebElement f=obj.get(i);
+			String link=f.getAttribute("innerHTML");
+			if(link.equalsIgnoreCase("Appium"))
+					{
+				f.click();
+				break;
+					}
+		}
+		driver.navigate().to("https://learn-automation.com/selenium-webdriver-tutorial-for-beginners/");
+		driver.navigate().to("https://learn-automation.com/testng-tutorials-for-beginners/");
+		driver.navigate().back();
+		driver.navigate().back();
+		driver.navigate().back();
+
+	}
+}

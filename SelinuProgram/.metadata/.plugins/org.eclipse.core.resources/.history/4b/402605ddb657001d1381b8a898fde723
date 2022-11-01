@@ -1,0 +1,18 @@
+package com.testLayer;
+
+import org.testng.annotations.Test;
+
+import com.pageLayer.LoginPage;
+import com.testBase.TestBase;
+
+public class LoginPagesTest extends TestBase {
+	@Test
+	public void verifyTestLogin() throws InterruptedException {
+		LoginPage logIn = new LoginPage();
+		logIn.enteremailAddress();
+		logIn.enterpwd();
+		logIn.clickOnlogin();
+		Thread.sleep(3000);
+	}
+
+}

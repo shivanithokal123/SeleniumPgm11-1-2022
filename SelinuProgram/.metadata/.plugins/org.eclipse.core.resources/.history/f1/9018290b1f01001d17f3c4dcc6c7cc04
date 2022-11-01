@@ -1,0 +1,34 @@
+package OwnPgm;
+
+public class Constructor {
+	public static void main(String args[])
+	{
+		Constructor b=new Constructor();
+		Constructor b2=new Constructor("shruti");
+		Constructor b3=new Constructor(99999999);
+		Constructor b4=new Constructor("Thokal",2.2f,5);
+		
+	
+		
+	}
+	Constructor()
+	{
+		int a=12;
+		System.out.println(a);
+}
+	Constructor(int a)
+	{
+		
+		System.out.println(a);
+	}
+	Constructor(String name)
+	{
+		System.out.println(name);
+		
+	}
+	Constructor(String lastname,float c,int f)
+	{
+		System.out.println(lastname + "\t" + c +"\n"+f);
+	}
+	
+}

@@ -1,0 +1,4 @@
+module SelinumPractise {
+	requires jakarta.activation;
+	requires selenium.server;
+}

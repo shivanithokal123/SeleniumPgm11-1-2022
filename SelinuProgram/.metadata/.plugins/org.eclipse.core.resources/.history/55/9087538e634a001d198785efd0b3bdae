@@ -1,0 +1,23 @@
+package Actual_Expected;
+
+import org.junit.Assert;
+import org.testng.annotations.Test;
+
+public class Assertion {
+	@Test
+	public void Test1() {
+			String actual="abc";
+			String Expected="abc1";
+			Assert.assertEquals(Expected, actual,"Given o/p is not match");
+			
+			
+	}
+	@Test
+	public void Test2() {
+			
+			Assert.assertEquals(16, 15,);
+			
+			
+	}
+	
+}

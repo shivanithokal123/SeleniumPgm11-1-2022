@@ -1,0 +1,14 @@
+package OwnPgm;
+
+public class local_Global_Static {
+	public static void main(String args[])
+{
+		local_Global_Static a1 = new local_Global_Static();
+		a1.localv1();
+}
+	public void localv1()
+	{
+		int a = 10;
+		System.out.println(a);
+	}
+}

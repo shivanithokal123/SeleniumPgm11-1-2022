@@ -1,0 +1,27 @@
+package non_primtivecasting;
+
+public class son extends father{
+	public static void bike() {
+		System.out.println("Son have bike");
+	}
+	public static void job() {
+		System.out.println("Son have job");
+	}
+	public static void main(String arg[])
+	{
+		//upcasting
+		father f = new son();
+		f.house();
+		f.land();//parent class jya property child ni use kelya tya ithe part deta yetat
+	 
+		//Downcasting
+		father a= new father();
+		son b=(son)a;
+		b.bike();
+		b.job();
+		b.house();
+		b.land();
+		
+	
+	}
+}

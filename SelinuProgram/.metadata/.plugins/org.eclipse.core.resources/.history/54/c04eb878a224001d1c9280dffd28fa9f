@@ -1,0 +1,15 @@
+package shruti;
+
+public class browser {
+	public class openchromebrowser {
+		public static void main(String []args) 
+		{
+			System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+			WebDriver s =new ChromeDriver();
+			s.get("https://www.linkedin.com/");
+			
+			
+		}
+
+}
+}

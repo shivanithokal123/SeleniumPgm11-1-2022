@@ -1,0 +1,28 @@
+package selenium_demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class iframe {
+	public static void main(String args[])
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shivani\\Documents\\UNB-Per\\Selinum jar file\\chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.get("https://www.unboundb2b.com/");
+		//using index iframe
+		//driver.switchTo().frame(0);
+		//driver.findElement(By.id("firstname-f190bbb4-2ec1-457d-9a45-64caa2275032")).sendKeys("shruti")
+		//using iframe name
+		driver.switchTo().frame("hs-form-iframe-0");
+		driver.findElement(By.id("firstname-f190bbb4-2ec1-457d-9a45-64caa2275032")).sendKeys("shruti");
+		//switch to parent frame
+		driver.switchTo().parentFrame();
+		driver.findElement(By.linkText("BLOG")).click();
+		//scroll up scroll down
+		driver.switchTo().defaultContent();
+		JavascriptExecutor s=((JavascriptExecutor)driver);
+	}
+}
